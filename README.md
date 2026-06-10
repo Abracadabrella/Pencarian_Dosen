@@ -149,20 +149,8 @@ Pilih nomor dosen 1-3 (Enter/q untuk batal): 1
 chmod +x ./dosen_lookup
 ```
 
-**Error "Koneksi HTTPS gagal":**
-- Periksa koneksi internet
-- Coba dengan `--use-env-proxy` jika berada di balik proxy kampus/kantor
-- Tambah timeout: `--connect-timeout 30 --read-timeout 180`
 
 **Hasil kosong / tidak ditemukan:**
 - Gunakan nama tanpa gelar (contoh: `"Samsul Bahri"` bukan `"Dr. Samsul Bahri, M.T."`)
 - Coba nama yang lebih pendek atau lebih spesifik
-
-**HTTP 403 / Akses ditolak:**
-- IP mungkin dibatasi sementara karena terlalu banyak request
-- Tambah jeda: `--detail-sleep 3.0 --retry-backoff 2.0`
-
-**HTTP 500 / Server error:**
-- Coba kata kunci yang lebih spesifik
-- Ulangi beberapa saat kemudian
 
